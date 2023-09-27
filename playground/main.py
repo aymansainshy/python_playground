@@ -1,5 +1,6 @@
 from leetCode.sliding_window._121_best_time_to_buy_and_sell_stock import maxProfit
 from leetCode.array_and_hashing._217_contains_duplicate import containsDuplicate2
+from leetCode.array_and_hashing._242_valid_anagram import isAnagram
 
 if __name__ == '__main__':
     # myString = "sainshy"
@@ -10,6 +11,11 @@ if __name__ == '__main__':
     # max_profit = maxProfit(prices)
     # print(max_profit)
 
-    prices = [7, 1, 5, 3, 6, 4, 7]
-    result = containsDuplicate2(prices)
+    # prices = [7, 1, 5, 3, 6, 4, 7]
+    # result = containsDuplicate2(prices)
+    # print(result)
+    s = "anagram"
+    t = "nagaram"
+
+    result = isAnagram(s, t)
     print(result)
