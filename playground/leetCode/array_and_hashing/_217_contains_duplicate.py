@@ -10,16 +10,14 @@ from typing import List
 
 def containsDuplicate(nums: List[int]) -> bool:
     visitedNums = {}
-    result = False
 
     for i in range(len(nums)):
         currentNum = nums[i]
         if currentNum in visitedNums:
-            result = True
-            break
+            return True
         else:
             visitedNums[currentNum] = i
-    return result
+    return False
 
 
 def containsDuplicate2(nums: List[int]) -> bool:
