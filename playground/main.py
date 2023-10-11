@@ -2,8 +2,13 @@ from leetCode.sliding_window._121_best_time_to_buy_and_sell_stock import maxProf
 from leetCode.array_and_hashing._217_contains_duplicate import containsDuplicate2
 from leetCode.array_and_hashing._1_two_sum import twoSum
 from leetCode.two_pointer._167_two_sum_II_input_array_is_sorted import twoSum2
+from leetCode.two_pointer._125_Valid_Palindrome import isPalindrome
 
 if __name__ == '__main__':
+    myString = "0P"
+    result = isPalindrome(myString)
+    print(result)
+
     # myString = "sainshy"
     # result = Solution.lengthOfLongestSubstring(myString)
     # print(result)
@@ -27,7 +32,7 @@ if __name__ == '__main__':
     # result = twoSum(nums, target)
     # print(result)
 
-    numbers =[1]
-    target = 1
-    result = twoSum2(numbers, target)
-    print(result)
+    # numbers =[1]
+    # target = 1
+    # result = twoSum2(numbers, target)
+    # print(result)
