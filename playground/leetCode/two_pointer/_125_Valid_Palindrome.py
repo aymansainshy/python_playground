@@ -10,8 +10,6 @@ Given a string s, return true if it is a palindrome, or false otherwise.
 def isPalindrome(s: str) -> bool:
     new_string = string_transformer(s)
 
-    print(new_string)
-
     l = 0
     r = len(new_string) - 1
 
