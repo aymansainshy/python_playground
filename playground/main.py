@@ -3,11 +3,16 @@ from leetCode.array_and_hashing._217_contains_duplicate import containsDuplicate
 from leetCode.array_and_hashing._1_two_sum import twoSum
 from leetCode.two_pointer._167_two_sum_II_input_array_is_sorted import twoSum2
 from leetCode.two_pointer._125_Valid_Palindrome import isPalindrome
+from leetCode.two_pointer._15_3Sum import threeSum
 
 if __name__ == '__main__':
-    myString = "0P"
-    result = isPalindrome(myString)
+    nums = [-1, 0, 1, 2, -1, -4]
+    result = threeSum(nums)
     print(result)
+
+    # myString = "0P"
+    # result = isPalindrome(myString)
+    # print(result)
 
     # myString = "sainshy"
     # result = Solution.lengthOfLongestSubstring(myString)
@@ -36,3 +41,5 @@ if __name__ == '__main__':
     # target = 1
     # result = twoSum2(numbers, target)
     # print(result)
+
+
