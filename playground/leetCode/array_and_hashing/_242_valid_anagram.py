@@ -31,10 +31,7 @@ def isAnagram(s: str, t: str) -> bool:
     tCount = charCount(t)
 
     for char in tCount:
-        if char not in sCount:
-            return False
-
-        if tCount[char] != sCount[char]:
+        if char not in sCount or tCount[char] != sCount[char]:
             return False
 
     return True

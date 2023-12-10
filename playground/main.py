@@ -1,3 +1,4 @@
+from leetCode.array_and_hashing._242_valid_anagram import isAnagram
 from leetCode.sliding_window._121_best_time_to_buy_and_sell_stock import maxProfit
 from leetCode.array_and_hashing._217_contains_duplicate import containsDuplicate2
 from leetCode.array_and_hashing._1_two_sum import twoSum
@@ -11,10 +12,10 @@ if __name__ == '__main__':
     # result = threeSum(nums)
     # print(result)
     #
-
-    strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
-    result = groupAnagrams(strs)
-    print(result)
+    #
+    # strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+    # result = groupAnagrams(strs)
+    # print(result)
 
     # myString = "0P"
     # result = isPalindrome(myString)
@@ -32,11 +33,11 @@ if __name__ == '__main__':
     # result = containsDuplicate2(prices)
     # print(result)
 
-    # s = "anagram"
-    # t = "nagaram"
-    #
-    # result = isAnagram(s, t)
-    # print(result)
+    s = "anagram"
+    t = "nagaram"
+
+    result = isAnagram(s, t)
+    print(result)
 
     # nums = [2, 7, 11, 15]
     # target = 9
