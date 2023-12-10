@@ -9,6 +9,7 @@ class Solution:
         left = 0  # sainshy
 
         for right in range(len(s)):
+
             while s[right] in visitedChar:
                 visitedChar.remove(s[left])
                 left += 1
