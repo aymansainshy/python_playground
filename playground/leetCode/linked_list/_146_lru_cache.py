@@ -37,7 +37,7 @@ class LRUCache2:
     def get(self, key):
         if key in self.cache:
             # Move the accessed key to the end to mark it as the most recently used
-            self.order.remove(key)
+            self.order.remove(key)  # O(n)
             self.order.append(key)
             return self.cache[key]
         return None
@@ -48,8 +48,8 @@ class LRUCache2:
             self.order.remove(key)
         elif len(self.cache) >= self.capacity:
             # If the cache is full, remove the least recently used item (the first in the order list)
-            old_key = self.order.pop(0)
-            del self.cache[old_key]
+            lru = self.order.pop(0)  # O(n)
+            del self.cache[lru]
 
         # Add the new key-value pair to the cache and the end of the order list
         self.cache[key] = value
@@ -138,7 +138,8 @@ if __name__ == '__main__':
     lru_cache.display_cache()  # Output: [(1, 'One'), (2, 'Two'), (3, 'Three')]
 
     # Access a key to mark it as most recently used
-    lru_cache.get(1)
+    value = lru_cache.get(1)
+    # print(value)
 
     # Display updated cache state
     lru_cache.display_cache()  # Output: [(2, 'Two'), (3, 'Three'), (1, 'One')]

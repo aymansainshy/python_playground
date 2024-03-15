@@ -32,6 +32,25 @@ class DoublyLinkedList:
             self.head.prev = new_node
             self.head = new_node
 
+    def delete(self, data):
+        current = self.head
+        while current:
+            if current.data == data:
+                if current == self.head and current == self.tail:
+                    self.head = None
+                    self.tail = None
+                elif current == self.head:
+                    self.head = current.next
+                    self.head.prev = None
+                elif current == self.tail:
+                    self.tail = current.prev
+                    self.tail.next = None
+                else:
+                    current.prev.next = current.next
+                    current.next.prev = current.prev
+                return
+            current = current.next
+
     # def delete(self, node):
     #     if node is None:
     #         return
