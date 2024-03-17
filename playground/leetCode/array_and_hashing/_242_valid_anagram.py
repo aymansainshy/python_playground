@@ -50,3 +50,11 @@ def charCount(s: str) -> dict[str, int]:
             visitedChar[char] = 1
 
     return visitedChar
+
+
+if __name__ == '__main__':
+    s = "anagram"
+    t = "nagaram"
+
+    result = isAnagram(s, t)
+    print(result)

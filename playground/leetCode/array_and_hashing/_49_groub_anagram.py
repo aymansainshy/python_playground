@@ -30,3 +30,9 @@ def groupAnagrams2(strs: List[str]) -> List[List[str]]:
         dic[tuple(sorted(word))].append(word)
 
     return dic.values()
+
+
+if __name__ == '__main__':
+    strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+    result = groupAnagrams(strs)
+    print(result)

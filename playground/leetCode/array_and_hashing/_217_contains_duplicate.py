@@ -28,3 +28,9 @@ def containsDuplicate2(nums: List[int]) -> bool:
             return True
         visitedNums.add(n)
     return False
+
+
+if __name__ == '__main__':
+    prices = [7, 1, 5, 3, 6, 4, 7]
+    result = containsDuplicate2(prices)
+    print(result)
