@@ -11,7 +11,6 @@ You must write an algorithm with O(log n) runtime complexity.
 
 
 # Use Binary search when array is sorted
-
 def binary_search(nums: List[int], target: int) -> int:
     left, right = 0, len(nums) - 1
 
