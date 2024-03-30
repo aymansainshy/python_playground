@@ -18,7 +18,7 @@ Output: 9
 from typing import List
 
 
-def longestConsecutive(nums: List[int]) -> int:
+def longestConsecutiveSequence(nums: List[int]) -> int:
     numsSet = set(nums)
     longest = 0
 
