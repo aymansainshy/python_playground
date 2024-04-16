@@ -9,7 +9,7 @@ from typing import List
 
 
 def threeSum(nums: List[int]) -> List[List[int]]:
-    nums.sort()
+    nums.sort()  # O(n)
     result = []
 
     for i, a in enumerate(nums):
@@ -20,7 +20,7 @@ def threeSum(nums: List[int]) -> List[List[int]]:
         r = len(nums) - 1
 
         while l < r:
-            threesum = a + nums[l] + nums[r]
+            threesum = nums[i] + nums[l] + nums[r]
             if threesum > 0:
                 r -= 1
             elif threesum < 0:

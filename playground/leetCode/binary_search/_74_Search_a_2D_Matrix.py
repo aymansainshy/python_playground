@@ -91,11 +91,33 @@ def searchMatrix(matrix: List[List[int]], target: int) -> bool:
     return False
 
 
+def searchMatrix4(matrix: List[List[int]], target: int) -> bool:
+    merged_array = []
+
+    for row in matrix:
+        merged_array.extend(row)
+
+    l, r = 0, len(merged_array) - 1
+
+    while l <= r:
+        m = l + ((r - l) // 2)
+
+        if target > merged_array[m]:
+            l = m + 1
+        elif target < merged_array[m]:
+            r = m - 1
+        else:
+            return True
+
+    return False
+
+
 if __name__ == '__main__':
     my_matrix = [[1, 3, 5, 7],
                  [10, 11, 16, 20],
                  [23, 30, 34, 60]]
+    mat = [[1]]
     my_target = 60
 
-    founded = searchMatrix3(my_matrix, my_target)
+    founded = searchMatrix(mat, my_target)
     print(founded)
