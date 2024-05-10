@@ -113,7 +113,7 @@ def searchMatrix4(matrix: List[List[int]], target: int) -> bool:
 
 
 if __name__ == '__main__':
-    my_matrix = [[1, 3, 5, 7],
+    my_matrix = [[1,   3,  5,  7],
                  [10, 11, 16, 20],
                  [23, 30, 34, 60]]
     mat = [[1]]
