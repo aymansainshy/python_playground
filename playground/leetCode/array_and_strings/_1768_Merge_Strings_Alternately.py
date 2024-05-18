@@ -17,7 +17,7 @@ def mergeAlternately(word1: str, word2: str) -> str:
         result.append(word2[j])
         i += 1
         j += 1
-    # add the remaining letters
+
     result.append(word1[i:])
     result.append(word2[j:])
 

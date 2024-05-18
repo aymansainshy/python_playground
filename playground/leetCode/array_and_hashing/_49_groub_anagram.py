@@ -27,7 +27,7 @@ def groupAnagrams2(strs: List[str]) -> List[List[str]]:
     dic = defaultdict(list)
     # {
     #     'word': ['word1', 'word2']
-    # }
+    # }ll
 
     for word in strs:
         dic[tuple(sorted(word))].append(word)
