@@ -33,8 +33,9 @@ class ListNode:
 
 
 def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-    dummy = ListNode()     # dummy and tail they are pointing to the same ListNode() in memory
-    tail = dummy
+    dummy_node = ListNode()
+    new_head = dummy_node  # head and tail they are pointing to the same ListNode() in memory
+    tail = dummy_node
 
     head1 = list1
     head2 = list2
@@ -54,7 +55,7 @@ def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optio
     elif head2:
         tail.next = head2
 
-    return dummy.next
+    return new_head.next
 
 
 if __name__ == '__main__':
