@@ -78,21 +78,43 @@ def carFleet(target: int, position: List[int], speed: List[int]) -> int:
     return len(stack)
 
 
+def carFleet2(target: int, position: List[int], speed: List[int]) -> int:
+    ps = {}
+
+    for i in range(len(position)):
+        ps[position[i]] = speed[i]
+
+    position.sort()
+
+    stack = []
+
+    j = len(position) - 1
+    while j >= 0:
+        arrival_time = (target - position[j]) / ps[position[j]]
+        stack.append(arrival_time)
+
+        if len(stack) >= 2 and stack[-1] <= stack[-2]:
+            stack.pop()
+        j -= 1
+
+    return len(stack)
+
+
 if __name__ == '__main__':
-    # position = [10, 8, 0, 5, 3],
-    # speed =    [ 2, 4, 1, 1, 3],
+    # position = [10, 8, 0, 5, 3];
+    # speed =    [ 2, 4, 1, 1, 3];
 
     # sorted_arr = [(0 , 1), (3 , 3), (5 , 1), (8 , 4), (10 , 2)]
 
-    #     12 - 10 / 2 = 1
-    #     12 - 8 / 4 = 1
-    #     12 - 5 / 1 = 7
-    #     12 - 3 / 3 = 3
-    #     12 - 0 / 1 = 12
+    #     12 - 10 / 2 =  1
+    #     12 -  8 / 4 =  1
+    #     12 -  5 / 1 =  7
+    #     12 -  3 / 3 =  3
+    #     12 -  0 / 1 = 12
 
     position = [10, 8, 0, 5, 3]
     speed = [2, 4, 1, 1, 3]
     target = 12  # destination
 
-    result = carFleet(target, position, speed)
+    result = carFleet2(target, position, speed)
     print(result)
