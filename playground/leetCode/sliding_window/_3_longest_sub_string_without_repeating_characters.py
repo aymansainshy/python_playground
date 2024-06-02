@@ -3,6 +3,7 @@ def lengthOfLongestSubstring2(s: str) -> int:
     visitedChar = set()
     left = 0  # sainshy
     right = 0
+
     # for right in range(len(s)):
     while right < len(s):
         while s[right] in visitedChar:
